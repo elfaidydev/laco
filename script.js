@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const heroImage = document.querySelector('.hero-image-container');
     const scrollTrigger = document.querySelector('.scroll-trigger-luxury');
 
-    const IDLE_LIMIT = 1 * 60 * 1000;
+    const IDLE_LIMIT = 5 * 60 * 1000;
     let idleTimeout;
     let isScrollingByClick = false;
 
