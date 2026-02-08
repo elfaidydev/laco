@@ -6,7 +6,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const heroImage = document.querySelector('.hero-image-container');
     const scrollTrigger = document.querySelector('.scroll-trigger-luxury');
 
-    // دقيقة واحدة للتجربة (60 ثانية × 1000 ميلي ثانية)
     const IDLE_LIMIT = 1 * 60 * 1000;
     let idleTimeout;
     let isScrollingByClick = false;
@@ -14,7 +13,6 @@ document.addEventListener('DOMContentLoaded', () => {
     function resetIdleTimer() {
         clearTimeout(idleTimeout);
         idleTimeout = setTimeout(() => {
-            // ما يرجعش للهيرو لو هو أصلاً فوق
             if (window.pageYOffset > 80) {
                 isScrollingByClick = true;
                 window.scrollTo({
@@ -41,13 +39,12 @@ document.addEventListener('DOMContentLoaded', () => {
                 document.body.classList.remove('loading-state');
                 setTimeout(() => {
                     heroContent.classList.add('active');
-                    resetIdleTimer(); // نبدأ عدّ الخمول أول ما الهيرو يشتغل
+                    resetIdleTimer(); 
                 }, 700);
             }, 900);
         }, 2800);
     };
 
-    // إفكتات الاسكرول على الهيرو + إعادة ضبط المؤقت
     window.addEventListener('scroll', () => {
         const scrolled = window.pageYOffset;
 
@@ -65,7 +62,6 @@ document.addEventListener('DOMContentLoaded', () => {
         resetIdleTimer();
     }, { passive: true });
 
-    // ريفيل الكروت
     const revealObserver = new IntersectionObserver((entries) => {
         entries.forEach((entry) => {
             if (entry.isIntersecting) {
@@ -87,7 +83,6 @@ document.addEventListener('DOMContentLoaded', () => {
         .querySelectorAll('.stagger-container, .artisan-item, .cinema-card')
         .forEach(el => revealObserver.observe(el));
 
-    // النافبار + سكروول سباي
     const navLinks = document.querySelectorAll('.nav-item');
     const sections = document.querySelectorAll('section');
 
@@ -113,7 +108,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
     sections.forEach(section => sectionObserver.observe(section));
 
-    // سكروول سموز مع offset للمنيو
     const smoothScrollTo = (targetId) => {
         const targetSection = document.querySelector(targetId);
         if (!targetSection) return;
@@ -146,19 +140,16 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // زر "اسحب للأعلى للاستكشاف" يودّي لقسم الحار
     if (scrollTrigger) {
         scrollTrigger.addEventListener('click', () => {
             smoothScrollTo('#hot');
         });
     }
 
-    // أي تاتش/كليك/حركة ماوس/كيبورد = نعيد تشغيل المؤقت
     ['touchstart', 'touchmove', 'click', 'mousemove', 'keydown'].forEach(evt => {
         window.addEventListener(evt, resetIdleTimer, { passive: true });
     });
 
-    // تسجيل الـ Service Worker (ملف منفصل اسمه sw.js)
     if ('serviceWorker' in navigator) {
         window.addEventListener('load', () => {
             navigator.serviceWorker.register('sw.js').catch(() => {});
