@@ -6,6 +6,50 @@ document.addEventListener('DOMContentLoaded', () => {
     const heroImage = document.querySelector('.hero-image-container');
     const scrollTrigger = document.querySelector('.scroll-trigger-luxury');
 
+    const portraitOverlay = document.querySelector('.portrait-only-overlay');
+
+    function updateOrientationState(){
+        const isLandscape = window.matchMedia('(orientation: landscape)').matches;
+        const isMobileTablet = window.matchMedia('(max-width: 1024px)').matches;
+
+        document.body.classList.toggle('is-landscape', isLandscape);
+        document.body.classList.toggle('is-mobile-tablet', isMobileTablet);
+
+        if (portraitOverlay){
+            if (isLandscape && isMobileTablet){
+                portraitOverlay.style.display = 'flex';
+                document.body.style.overflow = 'hidden';
+            } else {
+                portraitOverlay.style.display = '';
+                if (!document.body.classList.contains('loading-state')){
+                    document.body.style.overflow = '';
+                }
+            }
+        }
+    }
+
+    updateOrientationState();
+    window.addEventListener('resize', updateOrientationState);
+    window.addEventListener('orientationchange', updateOrientationState);
+
+    // محاولة Lock (تشتغل في بعض المتصفحات/وبالأخص لو PWA)
+    let triedLock = false;
+    async function tryLockPortrait(){
+        if (triedLock) return;
+        triedLock = true;
+
+        try{
+            if (screen.orientation && screen.orientation.lock){
+                await screen.orientation.lock('portrait-primary');
+            }
+        }catch(e){
+        }
+    }
+
+    ['click','touchstart'].forEach(evt => {
+        window.addEventListener(evt, tryLockPortrait, { passive: true, once: true });
+    });
+
     const IDLE_LIMIT = 5 * 60 * 1000;
     let idleTimeout;
     let isScrollingByClick = false;
@@ -26,20 +70,22 @@ document.addEventListener('DOMContentLoaded', () => {
         }, IDLE_LIMIT);
     }
 
-    // لودر البداية
     window.onload = () => {
         setTimeout(() => {
-            progressBar.style.width = "100%";
+            if (progressBar) progressBar.style.width = "100%";
         }, 300);
 
         setTimeout(() => {
-            loaderContent.classList.add('fade-out-content');
+            if (loaderContent) loaderContent.classList.add('fade-out-content');
             setTimeout(() => {
-                curtain.classList.add('slide-up');
+                if (curtain) curtain.classList.add('slide-up');
                 document.body.classList.remove('loading-state');
+
+                updateOrientationState();
+
                 setTimeout(() => {
-                    heroContent.classList.add('active');
-                    resetIdleTimer(); 
+                    if (heroContent) heroContent.classList.add('active');
+                    resetIdleTimer();
                 }, 700);
             }, 900);
         }, 2800);
@@ -48,7 +94,7 @@ document.addEventListener('DOMContentLoaded', () => {
     window.addEventListener('scroll', () => {
         const scrolled = window.pageYOffset;
 
-        if (scrolled < window.innerHeight) {
+        if (heroImage && heroContent && scrolled < window.innerHeight) {
             requestAnimationFrame(() => {
                 const blurVal = Math.min(scrolled * 0.04, 20);
                 const scaleVal = 1.1 - (scrolled * 0.00015);
