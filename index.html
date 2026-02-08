@@ -1,0 +1,610 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>LACO | The Majestic Signature</title>
+
+    <meta name="theme-color" content="#2b180d">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+    <link rel="apple-touch-icon" href="icons/icon-192.png">
+    <link rel="manifest" href="manifest.webmanifest">
+
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300&family=Noto+Kufi+Arabic:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="dark-mode loading-state">
+
+    <div id="curtain" class="curtain-loader">
+        <div class="loader-content" id="loader-content">
+            <h1 class="loader-logo laco-300">LACO</h1>
+            <div class="progress-track">
+                <div class="progress-bar" id="progress-bar"></div>
+            </div>
+        </div>
+    </div>
+
+    <header class="hero-fixed">
+        <div class="hero-image-container"></div>
+        <div class="hero-spotlight-overlay"></div>
+        <div class="hero-content reveal-on-load">
+            <h1 class="main-logo laco-300">LACO</h1>
+            <div class="gold-line-shimmer"></div>
+            <p class="hero-tagline-classy">your favorite place</p>
+        </div>
+        <div class="scroll-trigger-luxury">
+            <span class="scroll-text">اسحب للأعلى للاستكشاف</span>
+            <div class="scroll-visual">
+                <div class="scroll-line"><div class="scroll-drop"></div></div>
+                <div class="scroll-arrow-icon"></div>
+            </div>
+        </div>
+    </header>
+
+    <div class="scrolling-wrapper">
+        
+        <nav id="main-nav">
+            <div class="nav-capsule">
+                <a href="#hot" class="nav-item active">
+                    <svg class="nav-icon" viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8h1a4 4 0 0 1 0 8h-1"></path><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"></path><line x1="6" y1="1" x2="6" y2="4"></line><line x1="10" y1="1" x2="10" y2="4"></line><line x1="14" y1="1" x2="14" y2="4"></line></svg>
+                    <span class="text">المشروبات الحارة</span>
+                </a>
+                <a href="#cold" class="nav-item">
+                    <svg class="nav-icon" viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12h20"></path><path d="M12 2v20"></path><path d="M20 20L4 4"></path><path d="M4 20L20 4"></path></svg>
+                    <span class="text">المشروبات الباردة</span>
+                </a>
+                <a href="#drip" class="nav-item">
+                    <svg class="nav-icon" viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"></path></svg>
+                    <span class="text">القهوة المقطرة</span>
+                </a>
+                <a href="#sweets" class="nav-item">
+                    <svg class="nav-icon" viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-8a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v8"></path><path d="M4 16s.5-1 2-1 2.5 2 4 2 2.5-2 4-2 2.5 2 4 2 2-1 2-1"></path><path d="M2 21h20"></path><path d="M7 8v2"></path><path d="M12 8v2"></path><path d="M17 8v2"></path><path d="M7 4h.01"></path><path d="M12 4h.01"></path><path d="M17 4h.01"></path></svg>
+                    <span class="text">الحلا</span>
+                </a>
+            </div>
+        </nav>
+
+        <main class="menu-container">
+            
+            <section id="hot" class="menu-section">
+                <h2 class="section-title">المشروبات الحارة</h2>
+                <div class="items-grid stagger-container">
+
+                    <article class="master-card anim-item">
+                        <div class="master-img">
+                           <img src="images/drinks/hot/1.jpg" alt="Espresso" loading="lazy">
+                       </div>
+                       <div class="master-info">
+                           <div class="info-text">
+                               <h3 class="m-name">اسبريسو</h3>
+                               <span class="m-en">ESPRESSO</span>
+                           </div>
+                           <div class="price-tag-simple">
+                               <span class="amount">11</span>
+                               <img src="images/saudi-riyal.svg" class="currency-svg" alt="">
+                           </div>
+                       </div>
+                   </article>
+
+                    <article class="master-card anim-item">
+                        <div class="master-img">
+                            <img src="images/drinks/hot/4.JPG" alt="Espresso" loading="lazy">
+                        </div>
+                        <div class="master-info">
+                            <div class="info-text">
+                                <h3 class="m-name">سبانش حار</h3>
+                                <span class="m-en">HOT SPANISH LATTE</span>
+                            </div>
+                            <div class="price-tag-simple">
+                                <span class="amount">18</span>
+                                <img src="images/saudi-riyal.svg" class="currency-svg" alt="">
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="master-card anim-item">
+                        <div class="master-img">
+                            <img src="images/drinks/hot/4.JPG" alt="Espresso" loading="lazy">
+                        </div>
+                        <div class="master-info">
+                            <div class="info-text">
+                                <h3 class="m-name">كابتشينو</h3>
+                                <span class="m-en">CAPPUCCINO</span>
+                            </div>
+                            <div class="price-tag-simple">
+                                <span class="amount">16</span>
+                                <img src="images/saudi-riyal.svg" class="currency-svg" alt="">
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="master-card anim-item">
+                        <div class="master-img">
+                            <div class="laco-placeholder">
+                                <span class="laco-brand-text laco-300">LACO</span>
+                            </div>
+                        </div>
+                        <div class="master-info">
+                            <div class="info-text">
+                                <h3 class="m-name">فلات وايت</h3>
+                                <span class="m-en">FLAT WHITE</span>
+                            </div>
+                            <div class="price-tag-simple">
+                                <span class="amount">15</span>
+                                <img src="images/saudi-riyal.svg" class="currency-svg" alt="">
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="master-card anim-item">
+                        <div class="master-img">
+                            <div class="laco-placeholder">
+                                <span class="laco-brand-text laco-300">LACO</span>
+                            </div>
+                        </div>
+                        <div class="master-info">
+                            <div class="info-text">
+                                <h3 class="m-name">كورتادو</h3>
+                                <span class="m-en">CORTADO</span>
+                            </div>
+                            <div class="price-tag-simple">
+                                <span class="amount">14</span>
+                                <img src="images/saudi-riyal.svg" class="currency-svg" alt="">
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="master-card anim-item">
+                        <div class="master-img">
+                            <div class="laco-placeholder">
+                                <span class="laco-brand-text laco-300">LACO</span>
+                            </div>
+                        </div>
+                        <div class="master-info">
+                            <div class="info-text">
+                                <h3 class="m-name">لاتيه</h3>
+                                <span class="m-en">CAFFÈ LATTE</span>
+                            </div>
+                            <div class="price-tag-simple">
+                                <span class="amount">16</span>
+                                <img src="images/saudi-riyal.svg" class="currency-svg" alt="">
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="master-card anim-item">
+                        <div class="master-img">
+                            <div class="laco-placeholder">
+                                <span class="laco-brand-text laco-300">LACO</span>
+                            </div>
+                        </div>
+                        <div class="master-info">
+                            <div class="info-text">
+                                <h3 class="m-name">امريكانو</h3>
+                                <span class="m-en">AMERICANO</span>
+                            </div>
+                            <div class="price-tag-simple">
+                                <span class="amount">12</span>
+                                <img src="images/saudi-riyal.svg" class="currency-svg" alt="">
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="master-card anim-item">
+                        <div class="master-img">
+                            <div class="laco-placeholder">
+                                <span class="laco-brand-text laco-300">LACO</span>
+                            </div>
+                        </div>
+                        <div class="master-info">
+                            <div class="info-text">
+                                <h3 class="m-name">هوت شوكلت</h3>
+                                <span class="m-en">HOT CHOCOLATE</span>
+                            </div>
+                            <div class="price-tag-simple">
+                                <span class="amount">19</span>
+                                <img src="images/saudi-riyal.svg" class="currency-svg" alt="">
+                            </div>
+                        </div>
+                    </article>
+
+                </div>
+            </section>
+
+            <section id="cold" class="menu-section">
+                <h2 class="section-title">المشروبات الباردة</h2>
+                <div class="horizontal-snap-slider stagger-container">
+                    <article class="master-card cold-theme anim-item">
+                        <div class="master-img">
+                            <img src="images/drinks/colud/5.JPG" alt="Matcha" loading="lazy">
+                        </div>
+                        <div class="master-info">
+                            <div class="info-text">
+                                <h3 class="m-name">ماتشا</h3>
+                                <span class="m-en">MATCHA LATTE</span>
+                            </div>
+                            <div class="price-tag-simple">
+                                <span class="amount">18</span>
+                                <img src="images/saudi-riyal.svg" class="currency-svg" alt="">
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="master-card cold-theme anim-item">
+                        <div class="master-img">
+                            <img src="images/drinks/colud/6.JPG" alt="Matcha Roseberry" loading="lazy">
+                        </div>
+                        <div class="master-info">
+                            <div class="info-text">
+                                <h3 class="m-name">ماتشا روز بيري</h3>
+                                <span class="m-en">MATCHA ROSEBERRY</span>
+                            </div>
+                            <div class="price-tag-simple">
+                                <span class="amount">21</span>
+                                <img src="images/saudi-riyal.svg" class="currency-svg" alt="">
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="master-card cold-theme anim-item">
+                        <div class="master-img">
+                            <img src="images/drinks/colud/7.JPG" alt="Hibiscus Tea" loading="lazy">
+                        </div>
+                        <div class="master-info">
+                            <div class="info-text">
+                                <h3 class="m-name">آيس تي كركديه</h3>
+                                <span class="m-en">HIBISCUS ICED TEA</span>
+                            </div>
+                            <div class="price-tag-simple">
+                                <span class="amount">19</span>
+                                <img src="images/saudi-riyal.svg" class="currency-svg" alt="">
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="master-card cold-theme anim-item">
+                        <div class="master-img">
+                            <img src="images/drinks/colud/8.JPG" alt="Peach Tea" loading="lazy">
+                        </div>
+                        <div class="master-info">
+                            <div class="info-text">
+                                <h3 class="m-name">ايس تي خوخ</h3>
+                                <span class="m-en">PEACH ICED TEA</span>
+                            </div>
+                            <div class="price-tag-simple">
+                                <span class="amount">18</span>
+                                <img src="images/saudi-riyal.svg" class="currency-svg" alt="">
+                            </div>
+                        </div>
+                    </article>
+                    <article class="master-card cold-theme anim-item">
+                        <div class="master-img">
+                            <div class="laco-placeholder">
+                                <span class="laco-brand-text laco-300">LACO</span>
+                            </div>
+                        </div>
+                        <div class="master-info">
+                            <div class="info-text">
+                                <h3 class="m-name">الفريدو</h3>
+                                <span class="m-en">FREDDO ESPRESSO</span>
+                            </div>
+                            <div class="price-tag-simple">
+                                <span class="amount">12</span>
+                                <img src="images/saudi-riyal.svg" class="currency-svg" alt="">
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="master-card cold-theme anim-item">
+                        <div class="master-img">
+                            <div class="laco-placeholder">
+                                <span class="laco-brand-text laco-300">LACO</span>
+                            </div>
+                        </div>
+                        <div class="master-info">
+                            <div class="info-text">
+                                <h3 class="m-name">سبانش لاتيه</h3>
+                                <span class="m-en">SPANISH LATTE</span>
+                            </div>
+                            <div class="price-tag-simple">
+                                <span class="amount">19</span>
+                                <img src="images/saudi-riyal.svg" class="currency-svg" alt="">
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="master-card cold-theme anim-item">
+                        <div class="master-img">
+                            <div class="laco-placeholder">
+                                <span class="laco-brand-text laco-300">LACO</span>
+                            </div>
+                        </div>
+                        <div class="master-info">
+                            <div class="info-text">
+                                <h3 class="m-name">آيس لاتيه</h3>
+                                <span class="m-en">ICED LATTE</span>
+                            </div>
+                            <div class="price-tag-simple">
+                                <span class="amount">17</span>
+                                <img src="images/saudi-riyal.svg" class="currency-svg" alt="">
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="master-card cold-theme anim-item">
+                        <div class="master-img">
+                            <div class="laco-placeholder">
+                                <span class="laco-brand-text laco-300">LACO</span>
+                            </div>
+                        </div>
+                        <div class="master-info">
+                            <div class="info-text">
+                                <h3 class="m-name">آيس امريكانو</h3>
+                                <span class="m-en">ICED AMERICANO</span>
+                            </div>
+                            <div class="price-tag-simple">
+                                <span class="amount">14</span>
+                                <img src="images/saudi-riyal.svg" class="currency-svg" alt="">
+                            </div>
+                        </div>
+                    </article>
+
+                </div>
+            </section>
+
+            <section id="drip" class="menu-section">
+                <h2 class="section-title">القهوة المقطرة</h2>
+                <div class="drip-royal-list stagger-container">
+                    
+                    <div class="drip-entry anim-item">
+                        <div class="drip-content">
+                            <div class="drip-text-side">
+                                <h3 class="drip-name-ar">ڤي 60</h3>
+                                <span class="drip-name-en">V60 DRIP</span>
+                            </div>
+                            <div class="drip-price-side">
+                                <span class="val">16</span>
+                                <img src="images/saudi-riyal.svg" class="currency-gold-pure" alt="">
+                            </div>
+                        </div>
+                        <div class="drip-bottom-line"></div>
+                    </div>
+
+                    <div class="drip-entry anim-item">
+                        <div class="drip-content">
+                            <div class="drip-text-side">
+                                <h3 class="drip-name-ar">آيس بلاك</h3>
+                                <span class="drip-name-en">ICE BLACK</span>
+                            </div>
+                            <div class="drip-price-side">
+                                <span class="val">19</span>
+                                <img src="images/saudi-riyal.svg" class="currency-gold-pure" alt="">
+                            </div>
+                        </div>
+                        <div class="drip-bottom-line"></div>
+                    </div>
+
+                    <div class="drip-entry anim-item">
+                        <div class="drip-content">
+                            <div class="drip-text-side">
+                                <h3 class="drip-name-ar">قهوة اليوم (حار)</h3>
+                                <span class="drip-name-en">TODAY'S COFFEE</span>
+                            </div>
+                            <div class="drip-price-side">
+                                <span class="val">11</span>
+                                <img src="images/saudi-riyal.svg" class="currency-gold-pure" alt="">
+                            </div>
+                        </div>
+                        <div class="drip-bottom-line"></div>
+                    </div>
+
+                    <div class="drip-entry anim-item">
+                        <div class="drip-content">
+                            <div class="drip-text-side">
+                                <h3 class="drip-name-ar">قهوة اليوم (بارد)</h3>
+                                <span class="drip-name-en">TODAY'S COFFEE</span>
+                            </div>
+                            <div class="drip-price-side">
+                                <span class="val">13</span>
+                                <img src="images/saudi-riyal.svg" class="currency-gold-pure" alt="">
+                            </div>
+                        </div>
+                        <div class="drip-bottom-line"></div>
+                    </div>
+
+                </div>
+            </section>
+
+            <section id="sweets" class="menu-section">
+                <h2 class="section-title">الحلا</h2>
+                <div class="items-grid sweets-theme stagger-container">
+                    
+                    <article class="cinema-card anim-item">
+                        <div class="cinema-img-box">
+                            <img src="images/sweets/2.JPG" alt="Chocolate Bar" loading="lazy">
+                        </div>
+                        <div class="product-label floating">
+                            <div class="label-info">
+                                <h3 class="p-name">شوكليت بار</h3>
+                                <span class="p-sub">CHOCOLATE BAR</span>
+                            </div>
+                            <div class="price-tag-simple">
+                                <span class="amount">14</span>
+                                <img src="images/saudi-riyal.svg" class="currency-svg" alt="">
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="cinema-card anim-item">
+                        <div class="cinema-img-box">
+                            <img src="images/sweets/3.JPG" alt="Berry Cheesecake" loading="lazy">
+                        </div>
+                        <div class="product-label floating">
+                            <div class="label-info">
+                                <h3 class="p-name">تشيز كيك توت</h3>
+                                <span class="p-sub">BERRY CHEESECAKE</span>
+                            </div>
+                            <div class="price-tag-simple">
+                                <span class="amount">22</span>
+                                <img src="images/saudi-riyal.svg" class="currency-svg" alt="">
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="cinema-card anim-item">
+                        <div class="cinema-img-box">
+                            <img src="images/sweets/4.JPG" alt="Caramel Cheesecake" loading="lazy">
+                        </div>
+                        <div class="product-label floating">
+                            <div class="label-info">
+                                <h3 class="p-name">تشيز كيك كراميل</h3>
+                                <span class="p-sub">CARAMEL CHEESECAKE</span>
+                            </div>
+                            <div class="price-tag-simple">
+                                <span class="amount">22</span>
+                                <img src="images/saudi-riyal.svg" class="currency-svg" alt="">
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="cinema-card anim-item">
+                        <div class="cinema-img-box">
+                            <img src="images/sweets/5.jpeg" alt="Qishta Cheesecake" loading="lazy">
+                        </div>
+                        <div class="product-label floating">
+                            <div class="label-info">
+                                <h3 class="p-name">تشيز القشد</h3>
+                                <span class="p-sub">QISHTA CHEESECAKE</span>
+                            </div>
+                            <div class="price-tag-simple">
+                                <span class="amount">22</span>
+                                <img src="images/saudi-riyal.svg" class="currency-svg" alt="">
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="cinema-card anim-item">
+                        <div class="cinema-img-box">
+                            <img src="images/sweets/6.JPG" alt="Mango Trifle" loading="lazy">
+                        </div>
+                        <div class="product-label floating">
+                            <div class="label-info">
+                                <h3 class="p-name">ترافيل مانجو</h3>
+                                <span class="p-sub">MANGO TRIFLE</span>
+                            </div>
+                            <div class="price-tag-simple">
+                                <span class="amount">26</span>
+                                <img src="images/saudi-riyal.svg" class="currency-svg" alt="">
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="cinema-card anim-item">
+                        <div class="cinema-img-box">
+                            <img src="images/sweets/7.JPG" alt="Pecan Caramel" loading="lazy">
+                        </div>
+                        <div class="product-label floating">
+                            <div class="label-info">
+                                <h3 class="p-name">بيكان كراميل</h3>
+                                <span class="p-sub">PECAN CARAMEL</span>
+                            </div>
+                            <div class="price-tag-simple">
+                                <span class="amount">26</span>
+                                <img src="images/saudi-riyal.svg" class="currency-svg" alt="">
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="cinema-card anim-item">
+                        <div class="cinema-img-box">
+                            <img src="images/sweets/8.JPG" alt="Latte Cake" loading="lazy">
+                        </div>
+                        <div class="product-label floating">
+                            <div class="label-info">
+                                <h3 class="p-name">لاتيه كيك</h3>
+                                <span class="p-sub">LATTE CAKE</span>
+                            </div>
+                            <div class="price-tag-simple">
+                                <span class="amount">20</span>
+                                <img src="images/saudi-riyal.svg" class="currency-svg" alt="">
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="cinema-card anim-item">
+                        <div class="cinema-img-box">
+                            <img src="images/sweets/9.JPG" alt="Berry Cake" loading="lazy">
+                        </div>
+                        <div class="product-label floating">
+                            <div class="label-info">
+                                <h3 class="p-name">بيري كيك</h3>
+                                <span class="p-sub">BERRY CAKE</span>
+                            </div>
+                            <div class="price-tag-simple">
+                                <span class="amount">24</span>
+                                <img src="images/saudi-riyal.svg" class="currency-svg" alt="">
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="cinema-card anim-item">
+                        <div class="cinema-img-box">
+                            <img src="images/sweets/10.JPG" alt="Date Cheesecake" loading="lazy">
+                        </div>
+                        <div class="product-label floating">
+                            <div class="label-info">
+                                <h3 class="p-name">تشيز التمر</h3>
+                                <span class="p-sub">DATE CHEESECAKE</span>
+                            </div>
+                            <div class="price-tag-simple">
+                                <span class="amount">24</span>
+                                <img src="images/saudi-riyal.svg" class="currency-svg" alt="">
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="cinema-card anim-item">
+                        <div class="cinema-img-box">
+                            <div class="laco-placeholder">
+                                <span class="laco-brand-text laco-300">LACO</span>
+                            </div>
+                        </div>
+                        <div class="product-label floating">
+                            <div class="label-info">
+                                <h3 class="p-name">كوكيز</h3>
+                                <span class="p-sub">CLASSIC COOKIES</span>
+                            </div>
+                            <div class="price-tag-simple">
+                                <span class="amount">12</span>
+                                <img src="images/saudi-riyal.svg" class="currency-svg" alt="">
+                            </div>
+                        </div>
+                    </article>
+
+                </div>
+            </section>
+
+            <footer class="footer">
+                <div class="footer-inner">
+                    <div class="footer-brand">
+                        <h1 class="footer-logo laco-300">LACO</h1>
+                        <p class="footer-tagline">EXPERIENCE THE SUPREME</p>
+                    </div>
+                    <div class="footer-meta">
+                        <span class="footer-year">&copy; 2026</span>
+                        <span class="footer-sep">•</span>
+                        <span class="footer-made-by">
+                            تم التصميم بواسطة
+                            <span class="footer-made-by-brand">ألفا بلس لتقنية المعلومات</span>
+                        </span>
+                    </div>
+                </div>
+            </footer>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
