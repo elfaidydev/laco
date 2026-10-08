@@ -96,6 +96,7 @@ export const MENU_SECTIONS: MenuSection[] = [
       { id: "berry-cake", nameAr: "بيري كيك", nameEn: "BERRY CAKE", price: 22, image: "/images/sweets/9.JPG" },
       { id: "date-cheesecake", nameAr: "تشيز التمر", nameEn: "DATE CHEESECAKE", price: 20, image: "/images/sweets/10.JPG" },
       { id: "cookies", nameAr: "كوكيز", nameEn: "CLASSIC COOKIES", price: 9, image: "/images/sweets/11.jpeg" },
+      { id: "double-chocolate-cookie", nameAr: "كوكيز دبل شوكليت", nameEn: "DOUBLE CHOCOLATE COOKIE", price: 17, image: "/images/sweets/12.jpeg" },
     ],
   },
 ];
